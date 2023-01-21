@@ -9,7 +9,7 @@ spec:
   templates:
     - name: calcul-foreachsymbols
       steps:
-        - - name: print-message
+        - - name: calcul-foreachsymbols
             template: calcul-mean
             arguments:
               parameters:
