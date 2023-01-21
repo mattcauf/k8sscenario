@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: stock-mean-calculator-
+  labels:
+    workflows.argoproj.io/archive-strategy: "false"
+spec:
+  entrypoint: calcul
+  templates:
+    - name: calcul
+      container:
+        image: mattcauf/mean-calculator
+        command: [python]
+        args: ["main.py" , "AAPL","GILD","COG","COL","DG","HON","JCI","MCD","MCHP","OKE","PXD","PX","PYPL","PWR","PVH"]

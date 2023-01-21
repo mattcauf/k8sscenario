@@ -1,7 +1,9 @@
 let's submit a workflow
 
 ```plain
-argo submit -n argo --watch https://raw.githubusercontent.com/argoproj/argo-workflows/master/examples/hello-world.yaml
+git clone https://github.com/mattcauf/k8sscenario.git
+cd k8sscenario/worklow
+argo submit -n argo --watch sample-python.yaml
 ```{{exec}}
 
 
@@ -15,7 +17,6 @@ now run kubectl logs PODNAME -n argo
 
 Let's get the workflow file.
 ```plain
-wget https://raw.githubusercontent.com/argoproj/argo-workflows/master/examples/hello-world.yaml
-cat hello-world.yaml
+cat sample-python.yaml
 ```{{exec}}
 
