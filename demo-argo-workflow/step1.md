@@ -50,5 +50,5 @@ kubectl patch deployment \
 
 
 ```plain
-kubectl -n argo --address 0.0.0.0 port-forward deployment/argo-server 8080:2746
+kubectl -n argo --address 0.0.0.0 port-forward deployment/argo-server 2746:80
 ```{{exec}}
