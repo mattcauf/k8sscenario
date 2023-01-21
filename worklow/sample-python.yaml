@@ -5,9 +5,9 @@ metadata:
   labels:
     workflows.argoproj.io/archive-strategy: "false"
 spec:
-  entrypoint: calcul
+  entrypoint: calcul-mean
   templates:
-    - name: calcul
+    - name: calcul-mean
       container:
         image: mattcauf/mean-calculator:1.0.0
         command: [python]

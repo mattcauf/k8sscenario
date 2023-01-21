@@ -13,6 +13,10 @@
       {
         "title": "Run my first workflow",
         "text": "step2.md"
+      },
+      {
+        "title": "Apply partitioning",
+        "text": "step3.md"
       }
     ]
   },

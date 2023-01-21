@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: stock-mean-calculator-partionned-
+  labels:
+    workflows.argoproj.io/archive-strategy: "false"
+spec:
+  entrypoint: calcul-foreachsymbols
+  templates:
+    - name: calcul-foreachsymbols
+      steps:
+        - - name: print-message
+            template: whalesay
+            arguments:
+              parameters:
+                - name: ticker
+                  value: "{{item}}"
+            withItems:
+              - hello world
+              - goodbye world
+    - name: calcul-mean
+      inputs:
+        parameters:
+          - name: ticker
+      container:
+        image: mattcauf/mean-calculator:1.0.0
+        command: [python]
+        args: ["main.py" , "{{inputs.parameters.ticker}}"]
