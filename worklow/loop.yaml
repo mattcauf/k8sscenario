@@ -16,8 +16,21 @@ spec:
                 - name: ticker
                   value: "{{item}}"
             withItems:
-              - hello world
-              - goodbye world
+              - AAPL
+              - GILD
+              - COG
+              - COL
+              - DG
+              - HON
+              - JCI
+              - MCD
+              - MCHP
+              - OKE
+              - PXD
+              - PX
+              - PYPL
+              - PWR
+              - PVH
     - name: calcul-mean
       inputs:
         parameters:
