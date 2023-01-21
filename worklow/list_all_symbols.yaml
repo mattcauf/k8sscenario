@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: list_symbols-
+  labels:
+    workflows.argoproj.io/archive-strategy: "false"
+spec:
+  entrypoint: list_symbols
+  templates:
+    - name: list_symbols
+      container:
+        image: mattcauf/mean-calculator:1.0.0
+        command: [python]
+        args: ["set.py"]
