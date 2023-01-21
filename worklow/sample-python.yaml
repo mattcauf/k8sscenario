@@ -9,6 +9,6 @@ spec:
   templates:
     - name: calcul
       container:
-        image: mattcauf/mean-calculator
+        image: mattcauf/mean-calculator:1.0.0
         command: [python]
         args: ["main.py" , "AAPL","GILD","COG","COL","DG","HON","JCI","MCD","MCHP","OKE","PXD","PX","PYPL","PWR","PVH"]
