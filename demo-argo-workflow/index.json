@@ -1,0 +1,18 @@
+{
+  "title": "Kubernetes argo workflow",
+  "description": "Demo of argo workflow",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Install Argo workflow",
+        "text": "step1.md"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
