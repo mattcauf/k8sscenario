@@ -9,6 +9,10 @@
       {
         "title": "Install Argo workflow",
         "text": "step1.md"
+      },
+      {
+        "title": "Run my first workflow",
+        "text": "step2.md"
       }
     ]
   },
