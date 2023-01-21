@@ -25,3 +25,30 @@ It's also possible to access ports using the top-right navigation in the termina
 Or we can display the link to that page:
 
 [ACCESS PORTS]({{TRAFFIC_SELECTOR}})
+
+```plain
+kubectl get pod -n kube-system
+```{{exec}}
+
+```plain
+kubectl create namespace argo
+kubectl apply -f https://github.com/argoproj/argo-workflows/releases/download/v3.4.4/install.yaml
+kubectl set-context --curent --namespace argo
+```{{exec}}
+
+```plain
+kubectl patch deployment \
+  argo-server \
+  --namespace argo \
+  --type='json' \
+  -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/args", "value": [
+  "server",
+  "--auth-mode=server"
+]}]'
+```{{exec}}
+
+
+
+```plain
+kubectl -n argo port-forward deployment/argo-server 2746:2746
+```{{exec}}
