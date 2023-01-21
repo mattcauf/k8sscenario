@@ -1,20 +1,20 @@
 Doing some optimization
 
 ```plain
-cat 
+cat loop.yaml
 ```{{exec}}
 
-
-workflow is finish let's check the pod logs
+lets submit it
 ```plain
-kubectl get pod - n argo
+argo submit -n argo --watch loop.yaml
 ```{{exec}}
 
-now run kubectl logs PODNAME -n argo
+In another tab run
 
 
 Let's get the workflow file.
 ```plain
-cat sample-python.yaml
+watch kubectl get pod -n argo
 ```{{exec}}
 
+We can now process an infinity of ticker
