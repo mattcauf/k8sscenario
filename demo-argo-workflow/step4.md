@@ -7,7 +7,7 @@ cat list_all_tickers.yaml
 
 
 ```plain
-argo submit -n argo --watch list_all_ticker.yaml
+argo submit -n argo --watch list_all_tickers.yaml
 ```{{exec}}
 
 
