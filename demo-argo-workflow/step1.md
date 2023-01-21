@@ -33,7 +33,7 @@ kubectl get pod -n kube-system
 ```plain
 kubectl create namespace argo
 kubectl apply -f https://github.com/argoproj/argo-workflows/releases/download/v3.4.4/install.yaml
-kubectl set-context --curent --namespace argo
+kubectl config set-context --curent --namespace argo
 ```{{exec}}
 
 ```plain
@@ -50,5 +50,5 @@ kubectl patch deployment \
 
 
 ```plain
-kubectl -n argo --address 0.0.0.0 port-forward deployment/argo-server 2746:80
+kubectl -n argo --address 0.0.0.0 port-forward argo-server/argo-server 2746:2746
 ```{{exec}}
