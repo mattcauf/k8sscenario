@@ -10,7 +10,7 @@ spec:
     - name: calcul-foreachsymbols
       steps:
         - - name: print-message
-            template: whalesay
+            template: calcul-mean
             arguments:
               parameters:
                 - name: ticker
